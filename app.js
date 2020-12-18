@@ -3,6 +3,8 @@ var api = {
     base :"https://api.openweathermap.org/data/2.5/" 
 }
 
+let latitude,longitude;
+
 var loc=new Array();
 var searchbox = document.querySelector('.search-box');
 currentlocation()
@@ -16,8 +18,8 @@ function currentlocation() {
 }
 
 function setPosition(position){
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
     
     getWeather(latitude, longitude);
 }
