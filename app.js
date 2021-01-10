@@ -53,7 +53,7 @@ function getResults(query) {
 }
 
 function displayResults(weather) {
-    loc.push(`${weather.name}, ${weather.sys.country}`);
+    loc.push(`${weather.name},${weather.sys.country}`);
     new TypeIt(".location .city", {
      speed: 100,
      waitUntilVisible: false
